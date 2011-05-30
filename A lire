@@ -1,0 +1,211 @@
+JAVA
+====
+
+-> http://download.oracle.com/javase/6/docs/api/ -> Formatter
+					         -> Thread
+					         -> java.lang de maniere generale
+					         -> java.io de maniere generale
+						 -> date, formatter, calendar... ce qu'il y a dans java.text
+							eviter Calendar, etc... et regarder la jsr 310... 
+							joda-time, threeten... http://joda-time.sourceforge.net/
+						 -> XML et java. (json?) JAX!
+						 ->  audio processing, URL
+
+-> http://www.oracle.com/technetwork/java/gc-tuning-5-138395.html -> tuning garbage collector
+
+-> http://download.oracle.com/javase/tutorial/essential/regex/ -> tuto sur les regex en java
+
+-> Tuning JVM??? => cf article sur LABS. 
+	- http://www.oracle.com/technetwork/java/javase/tech/vmoptions-jsp-140102.html	----->>>> la y'a tous les flags possible!
+	- http://blog.codecentric.de/en/2010/01/java-outofmemoryerror-1-akt-das-java-memory-modell-stellt-sich-vor/
+	- http://blog.codecentric.de/en/2011/03/java-memory-leaks-et-al/
+	- http://blog.codecentric.de/en/2011/03/java-memory-configuration-and-monitoring-3rd-act/  ---->>> trop bien y'a les flags et tout :)
+
+librairies supplementaires: - http://guava-libraries.googlecode.com/svn/tags/release09/javadoc/index.html -> java selon google
+			    - http://joda-time.sourceforge.net/api-release/index.html -> des dates qui craigent pas \o/
+			    - https://github.com/pyricau/FunkyJFunctional#readme -> pour les fonctions funky.
+
+ECLIPSE:
+========
+
+-> apprendre les raccourcis, + editions avec du split screen?
+
+-> apprendre a modifier les .project -> point d'entrée : http://help.eclipse.org/helios/index.jsp?topic=/org.eclipse.platform.doc.isv/reference/misc/project_description_file.html
+
+-> exporter son eclipse: sauvegarder le repertoire eclipse, et regarder le plugin google workspace mechanic (http://google-opensource.blogspot.com/2010/05/introducing-workspace-mechanic-for.html)
+
+J2EE:
+=====
+
+-> http://download.oracle.com/javaee/6/api/index.html?javax/persistence/package-summary.html -> api persistence
+
+-> http://download.oracle.com/docs/cd/E11035_01/kodo41/full/html/ejb3_langref.html -> reference JPQL
+
+-> http://docs.jboss.org/hibernate/annotations/3.4/reference/fr/html/entity.html -> une page de doc complete, notemment sur les anotations
+
+-> http://java.sun.com/blueprints/corej2eepatterns/Patterns/DataAccessObject.html -> doc sun sur le pattern DAO
+
+LOGGING:
+========
+
+	log4j
+	-----
+
+-> les differents niveaux dans l'ordre: OFF, DEBUG, INFO, WARN, ERROR, FATAL
+-> %c = categorie evenement; %d = date; %p = priorite; %m = message; %n = newline
+-> http://logging.apache.org/log4j/1.2/apidocs/index.html -> api log4j
+-> http://publib.boulder.ibm.com/infocenter/p8docs/v5r0m0/index.jsp?topic=/com.ibm.p8.doc/rm_help/admin/configure_rm_logging.htm -> avec une liste des parametres ;)
+
+	slf4j
+	-----
+
+-> si on a le choix... la doc est là: http://www.slf4j.org/docs.html
+
+MAVEN:
+======
+
+-> http://maven.apache.org/ref/2.0.8/maven-model/maven.html -> toutes les balises maven. (consulter le fichier pom_full.xml => mieux indenté.)
+							    -> un peu moins violent: http://maven.apache.org/pom.html
+
+-> pour configurer maven -> /home/excilys/apache-maven-3.0.3/settings.xml
+
+-> petite liste d'archetypes maven -> http://docs.codehaus.org/display/MAVENUSER/Archetypes+List
+
+-> listes non exhaustives des plugins maven: - http://maven.apache.org/plugins/
+					     - http://mojo.codehaus.org/plugins.html
+
+-> petite liste des scopes des dependances: compile (tout... par defaut), provided(amené par le server, le jdk...), runtime (execution seulement), test (compile et exec des tests), system (idem provided, mais il faut fournir le path).
+
+-> lifecycle maven management: http://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html
+
+-> http://maven.apache.org/plugins/maven-eclipse-plugin/examples/multi-module-projects.html -> gerer les modules en maven avec eclipse.
+
+JDBC:
+=====
+
+-> rowset un peu mieux qu'avant; mais pas d'implementation dans le jdk; aller les chercher à com.sun.rowset
+
+HIBERNATE:
+==========
+
+-> configurer hibernate dans: hibernate.properties/hibernate.cfg.xml (a mettre dans le classpath)
+
+-> mapping dans des fichiers cml au nom appropriés (déclarés dans le fichier de conf).
+
+-> ouvrir une session: SessionFactory sf = new Configuration().configure(URL).buildSessionFactory(); // sf est threadsafe mais est generalement unique => singleton. URL represente le fichier de conf d'hibernate.
+		       Session s = sf.get() // s non threadsafe donc 1 par thread.
+		       //on utilise ensuite la session avec: beginTransaction(), save(), update(), lock(), saveOrUpdate(), etc... ; et divers objets (objet transaction: commit(), rollback(); Query, etc.)
+
+-> api: http://docs.jboss.org/hibernate/core/3.5/api/
+
+-> guide de reference HQL: http://docs.jboss.org/hibernate/core/3.3/reference/en/html/queryhql.html (documentation globale hibernate:  http://docs.jboss.org/hibernate/core/3.3/reference/en/html/index.html)
+
+JUNIT:
+======
+
+-> http://junit.sourceforge.net/javadoc/
+
+JSP:
+====
+
+-> meme api que les servlet... Vu qu'elle deviennent des servlets.
+
+-> heritage deconseillé.
+
+-> utiliser les objets request, response, out sesson, application, pageContent qui sont equivalents aux objets servlets, mais plus courts a appeller.
+
+-> syntaxe: - HTML: http://java.sun.com/products/jsp/tags/11/tags11.html
+	    - XML: http://java.sun.com/products/jsp/syntax/2.0/syntaxref20.html
+
+	taglibs:
+	--------
+		 -> pour creer ses taglibs: http://adiguba.developpez.com/tutoriels/j2ee/jsp/taglib/
+		 -> taglibs existants: http://download.oracle.com/javaee/5/jstl/1.1/docs/tlddocs/
+
+SERVLET:
+========
+
+-> http://tomcat.apache.org/tomcat-5.5-doc/servletapi/index.html
+
+-> tools: - evenements et listener (implementer une classe listener de l'api javax.servlet, et la declarer dans le web.xml): http://download.oracle.com/javaee/5/api/index.html?javax/servlet/package-summary.html
+	  - filtres (implementer javax.servlet.filter; gestion des enchainements avec filterChain; des configurations avec FilterConfig; declaration dans le web.xml (attention l'ordre compte!!!): meme aPI qu'au dessus.
+	  - securite: configuration du mode (BASIC, FORM,CLIENT-CERT) dans le web.xml; ainsi que, le cas echeant, les params a utiliser (par exemple formulaire et page d'erreur pour le mode form). On definit aussi les politiques de securites en fonction des roles (un peu a la maniere d'un filtre).
+
+SPRING:
+=======
+
+-> http://static.springsource.org/spring/docs/2.5.x/api/ l'api de spring 2.5
+
+-> cf le cours, y'a plein de choses.
+
+-> t'en es a l'exo 3...
+
+-> lire critera.
+
+HSQLDB:
+=======
+
+-> http://hsqldb.org/doc/guide/guide.html
+
+GIT
+===
+
+-> http://www.kernel.org/pub/software/scm/git/docs/ -> git manpage
+
+-> http://www.siteduzero.com/tutoriel-3-254198-gerez-vos-codes-source-avec-git.html -> tuto git basique
+
+-> http://peepcode.com/products/git-internals-pdf -> sur les mecaniques internes de git.
+
+-> http://library.dzone.com/sites/all/files/refcardz/rc094-010d-git_1.pdf -> refcardz git
+
+-> http://progit.org/book/ -> livre opensource
+
+VIM
+===
+
+http://www.viemu.com/a_vi_vim_graphical_cheat_sheet_tutorial.html
+
+ANDROID
+=======
+
+-> http://developer.android.com/guide/developing/index.html -> de la doc
+
+-> http://developer.android.com/videos/index.html#v=ptjedOZEXPM -> des videos
+
+SYMPHONY
+========
+
+-> http://www.symfony-project.org/
+
+QUESTIONS:
+==========
+
+-> quels sont les ressources à liberer absolument? (autres que fichiers, pipes, connection DB...) => sessions
+
+-> Gestion de cache???? ( EHCache = ref.       A la memcache, Jboss cache etc...)
+
+-> embarquables et heritage?
+
+-> reponse row par row en jpql? non mais oui en Hibernate.
+
+->J2EE, JSF, et SEO?
+
+-> un serveur d'applications java tourne dans une JVM => pas de réelle concurence => on peut recuperer l'ordonnancement des taches => si on filtre les taches qui affectent les données communes sensibles (les données en BDD), et qu'on logge les actions demandées sur elles; on peut detecter quand est ce qu'il y a un soucis, et revenir en arriere. (Dans le cas ou on a un seul serveur applicatif, et ou la BDD tourne sur la même machine (ou alors il faut avoir une connection en mode connecte garantissant l'ordre d'arrivée des paquets contenant les requetes))... Dans ce cas quel est l'interet de la gestion des transactions?
+
+DIVERS:
+=======
+
+-> opt -> http://www.infoq.com/presentations/LMAX -> vidéo a regarder.
+
+-> a lire, ou en cours:
+	- extreme programming
+	- hibernate... faire les exos
+	- EJB (relecture (des ejb et des session beans)... + relecture des xml mapping + repreciser timer.) finir j2ee ...OK
+	- maven ... OK
+	- fin junit (necessite JDBC) ...ok
+	- spring
+	- JEE/JSP
+
+-> realiser l'executeur de code a distance.
+
+-> http://library.dzone.com -> la plupart des technos en quelques pages... :)
