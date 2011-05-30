@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean id="unTruc" class="com.excilys.formation.spring.exo1.SomeThing">
+		<property name="chaine" value="maChaine"/>
+		<property name="nombre" value="2"/>
+		<property name="flottant" value="0.777"/>
+		<property name="ensemble">
+			<set>
+				<value>ma premiere valeur de l'ensemble</value>
+				<value>ma deuxieme valeur de l'ensemble</value>
+			</set>
+		</property>
+		<property name="liste">
+			<list>
+				<value>ma premiere valeur de la liste</value>
+				<value>ma deuxieme valeur de la liste</value>
+			</list>
+		</property>
+		<property name="dico">
+			<map>
+				<entry key="premier index" value="premiere Valeur"/>
+				<entry key="deuxieme index" value="deuxieme Valeur"/>
+			</map>
+		</property>		
+	</bean>
+	
+	<bean id="unDeuxiemeTruc" class="com.excilys.formation.spring.exo1.SomeThing">
+		<property name="chaine" value="je suis le deuxieme objet!"/>
+		<property name="nombre" value="-999"/>
+		<property name="flottant" value="300"/>
+		<property name="ensemble">
+			<set>
+				<value>hello</value>
+				<value>world!!!</value>
+			</set>
+		</property>
+		<property name="liste">
+			<list>
+				<value>oh!</value>
+				<value>une liste...</value>
+			</list>
+		</property>
+		<property name="dico">
+			<map>
+				<entry key="cacahuete" value="biere"/>
+				<entry key="biere" value="cacahuete"/>
+			</map>
+		</property>		
+	</bean>
+	<import resource="services.xml"/>
+</beans>

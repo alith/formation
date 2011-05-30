@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string-array name="hand_movement">
+		<item>Default</item>
+		<item>Inside throws</item>
+		<item>Outside throws</item>
+		<item>Half shower</item>
+		<item>Mills Mess</item>
+		<item>Backcrosses</item>
+		<item>Backshoulders</item>
+		<item>Backcatches</item>
+		<item>Custom</item>
+	</string-array>
+	
+	<string-array name="hand_movement_values">
+		<item></item>
+		<item>(10)(32.5).</item>
+		<item>(32.5)(10).</item>
+		<item>(32.5)(10).(10)(32.5).</item>
+		<item>(-30)(2.5).(30)(-2.5).(-30)(0).</item>
+		<item>(-10,0,-50)(20,0,0).</item>
+		<item>(25,0,-50)(0,0,0).</item>
+		<item>(0,0,0)(25,0,-50).</item>
+		<item></item>
+	</string-array>
+
+	<string-array name="body_movement">
+		<item>Default</item>
+		<item>Line</item>
+		<item>Feed</item>
+		<item>Back to back</item>
+		<item>Side to side</item>
+		<item>Circles</item>
+		<item>Custom</item>
+	</string-array>
+
+	<string-array name="body_movement_values">
+		<item></item>
+		<item>&lt;(90).|(270,-125).|(90,125).|(270,-250).|(90,250).|(270,-375).&gt;</item>
+		<item>&lt;(90).|(270,-150,50).|(270,-150,-50).|(270,-150,150).|(270,-150,-150).&gt;</item>
+		<item>&lt;(270).|(90,-50).|(0,-25,25).|(180,-25,-25).&gt;</item>
+		<item>&lt;(0).|(0,100).|(0,-100).|(0,200).|(0,-200).|(0,300).&gt;</item>
+		<item>(0,75,0)...(90,0,75)...(180,-75,0)...(270,0,-75)...</item>
+		<item></item>
+	</string-array>
+
+	<string-array name="prop_type">
+		<item>Ball</item>
+		<item>Ring</item>
+		<item>Club</item>
+		<item>Cube</item>
+		<item>Image</item>
+	</string-array>
+
+	<string-array name="rhythm">
+		<item>Asynch</item>
+		<item>Synch</item>
+	</string-array>
+
+	<string-array name="jugglers">
+		<item>1</item>
+		<item>2</item>
+		<item>3</item>
+		<item>4</item>
+		<item>5</item>
+		<item>6</item>
+	</string-array>
+
+	<string-array name="compositions">
+		<item>All</item>
+		<item>Non-obvious</item>
+		<item>None (prime only)</item>
+	</string-array>
+
+	<string-array name="trick">
+		<item>1 Ball out of a 3-Cascade</item>
+		<item>Throw Twice</item>
+		<item>2 Balls out of a 3-Cascade</item>
+		<item>Throw 3 Times</item>
+		<item>3-Cascade</item>
+		<item>2 in One Hand</item>
+		<item>4-Synchronous Fountain</item>
+		<item>4-Fountain</item>
+		<item>2 Balls out of a 5-Cascade</item>
+		<item>3 Balls</item>
+		<item>Chase</item>
+		<item>Flash</item>
+		<item>4 Balls</item>
+		<item>4 Balls out of a 5-Cascade</item>
+		<item>552</item>
+		<item>5551</item>
+		<item>5-Cascade</item>
+		<item>3-ball Flash</item>
+	</string-array>
+</resources>

@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.hibernate.mapping.object.genere">
+	<class
+		name="ZoneRef"
+		table="zone_ref"
+	>
+		<meta attribute="sync-DAO">false</meta>
+		<id
+			name="Id"
+			type="integer"
+			column="zone_id"
+		>
+			<generator class="increment"/>
+		</id>
+
+		<property
+			name="ZoneDebut"
+			column="zone_debut"
+			type="integer"
+			not-null="false"
+			length="11"
+		/>
+		<property
+			name="ZoneFin"
+			column="zone_fin"
+			type="integer"
+			not-null="false"
+			length="11"
+		/>
+		<property
+			name="Prix"
+			column="prix"
+			type="java.lang.Float"
+			not-null="false"
+			length="12"
+		/>
+	
+
+	</class>	
+</hibernate-mapping>

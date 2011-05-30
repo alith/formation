@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.jonglen7.jugglinglab"
+    android:id="@+id/home_root"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    
+    <com.markupartist.android.widget.ActionBar
+        android:id="@+id/actionbar"
+        app:title="@string/home_title"
+        style="@style/ActionBar"
+    />
+    
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:padding="6dip">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <Button android:id="@+id/home_btn_pattern_entry"
+                style="@style/HomeButton"
+                android:onClick="onPatternEntryClick"
+                android:text="@string/home_btn_pattern_entry"/>
+            <Button android:id="@+id/home_btn_generator"
+                style="@style/HomeButton"
+                android:onClick="onGeneratorClick"
+                android:text="@string/home_btn_generator"/>
+        </LinearLayout>
+    </LinearLayout>
+    
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:padding="6dip">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <Button android:id="@+id/home_btn_tutorials"
+                style="@style/HomeButton"
+                android:onClick="onTutorialsClick"
+                android:text="@string/home_btn_tutorials"/>
+            <Button android:id="@+id/home_btn_pattern_list"
+                style="@style/HomeButton"
+                android:onClick="onPatternListClick"
+                android:text="@string/home_btn_pattern_list"/>
+        </LinearLayout>
+    </LinearLayout>
+    
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:padding="6dip">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <Button android:id="@+id/home_btn_my_profile"
+                style="@style/HomeButton"
+                android:onClick="onMyProfileClick"
+                android:text="@string/home_btn_my_profile"/>
+            <Button android:id="@+id/home_btn_video"
+                style="@style/HomeButton"
+                android:onClick="onVideoClick"
+                android:text="@string/home_btn_video"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

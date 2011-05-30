@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd" >
+
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+ <appender name="console" class="org.apache.log4j.ConsoleAppender">
+   <layout class="org.apache.log4j.PatternLayout">
+     <param name="ConversionPattern" value="Date=[%d{dd/MM/yyyy}] %p [%c{1}] %m%n"/>
+	</layout>
+ </appender>
+ <appender name="HTML" class="org.apache.log4j.FileAppender">
+   <param name="file" value="log.html"></param><layout class="org.apache.log4j.HTMLLayout">
+     <param name="title" value="log de classLoggee"></param></layout>
+   </appender>
+ <appender name="MinuteRotaLog" class="org.apache.log4j.DailyRollingFileAppender">
+ 	<param name="file" value="minute.log"></param><param name="DatePattern" value="'.'yyyy-MM-dd  HH:mm"></param>
+ 	<layout class="org.apache.log4j.PatternLayout">
+ 		<param name="ConversionPattern" value="Date = [%d{dd/MM/yyyy}] Niveau = %p Classe = [%c{1}] Message = %m%n"></param></layout>
+ 	</appender><logger name="ebi.training" additivity="false">
+ 	<level value="DEBUG"/>
+ 	<appender-ref ref="console"/>
+ </logger>
+ <logger name="ebi.training.java.outils.log4j.package1" additivity="false">
+ 	<level value="DEBUG"></level>
+ 	<appender-ref ref="HTML"></appender-ref></logger><logger name="ebi.training.java.outils.log4j.dailyTest" additivity="false">
+	<level value="DEBUG"></level>
+	<appender-ref ref="MinuteRotaLog"></appender-ref></logger><root>
+	<priority value="INFO">
+	</priority>
+	<appender-ref ref="console"/>
+ </root>
+ </log4j:configuration>

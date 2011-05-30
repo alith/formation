@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+	<context:annotation-config />
+	<context:component-scan base-package="com.excilys.formation.spring.exo3" />
+
+	<bean id="NameBean" class="com.excilys.formation.spring.exo3.NameBean"/>
+	<bean id="VerificateurAttributsImpl1" class="com.excilys.formation.spring.exo3.VerificateurAttributsImpl1">
+		<property name="chaine" value="maChaine" />
+		<property name="ensemble">
+			<set>
+				<value>ma premiere valeur de l'ensemble</value>
+				<value>ma deuxieme valeur de l'ensemble</value>
+			</set>
+		</property>
+		<property name="liste">
+			<list>
+				<value>ma premiere valeur de la liste</value>
+				<value>ma deuxieme valeur de la liste</value>
+			</list>
+		</property>
+		<property name="dico">
+			<map>
+				<entry key="premier index" value="premiere Valeur" />
+				<entry key="deuxieme index" value="deuxieme Valeur" />
+			</map>
+		</property>
+		<property name="nameBean" ref="NameBean"/>
+	</bean>
+		<bean id="VerificateurAttributsImpl2" class="com.excilys.formation.spring.exo3.VerificateurAttributsImpl2">
+		<property name="chaine" value="maChaine" />
+		<property name="ensemble">
+			<set>
+				<value>ma premiere valeur de l'ensemble</value>
+				<value>ma deuxieme valeur de l'ensemble</value>
+			</set>
+		</property>
+		<property name="liste">
+			<list>
+				<value>ma premiere valeur de la liste</value>
+				<value>ma deuxieme valeur de la liste</value>
+			</list>
+		</property>
+		<property name="dico">
+			<map>
+				<entry key="premier index" value="premiere Valeur" />
+				<entry key="deuxieme index" value="deuxieme Valeur" />
+			</map>
+		</property>
+		<property name="nameBean" ref="NameBean"/>
+	</bean>
+</beans>
