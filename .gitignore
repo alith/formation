@@ -1,0 +1,10 @@
+**.jar
+**.war
+**.class
+**.classpath
+**.project
+**.settings
+**/.settings/**
+**.svn
+**/.svn/**
+**target
