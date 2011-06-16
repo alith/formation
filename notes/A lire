@@ -30,6 +30,19 @@ ECLIPSE:
 
 -> apprendre les raccourcis, + editions avec du split screen?
 
+	-> Ctrl + Shift + L = liste des raccourcis
+
+	-> http://rayfd.wordpress.com/2007/05/20/10-eclipse-navigation-shortcuts-every-java-programmer-should-know/
+
+	-> http://eclipse.dzone.com/news/effective-eclipse-shortcut-key
+
+	-> http://www.javaprogrammingforums.com/java-code-snippets-tutorials/19-useful-eclipse-shortcut-keys.html
+	
+	-> ctrl F6,  ctrl F7, ctrl F8 => changer d'editeur, de view, de perspective. ctrl + e = changer d'editeur (ne gere pas le split)
+	
+	->Gerer ses fenetres: - sous windows: gerer ses fenetres avec GridMove ( http://jgpaiva.dcmembers.com/gridmove.html ) 
+						  - sous linux Xmonad ( http://www.haskell.org/haskellwiki/Xmonad/Frequently_asked_questions ; http://xmonad.org/ )
+
 -> apprendre a modifier les .project -> point d'entrée : http://help.eclipse.org/helios/index.jsp?topic=/org.eclipse.platform.doc.isv/reference/misc/project_description_file.html
 
 -> exporter son eclipse: sauvegarder le repertoire eclipse, et regarder le plugin google workspace mechanic (http://google-opensource.blogspot.com/2010/05/introducing-workspace-mechanic-for.html)
@@ -163,15 +176,6 @@ GIT
 -> http://www.alexgirard.com/git-book/index.html
 
 -> http://www.kernel.org/pub/software/scm/git/docs/user-manual.html
-
-Eclipse:
-========
-
--> http://rayfd.wordpress.com/2007/05/20/10-eclipse-navigation-shortcuts-every-java-programmer-should-know/
-
--> http://eclipse.dzone.com/news/effective-eclipse-shortcut-key
-
--> http://www.javaprogrammingforums.com/java-code-snippets-tutorials/19-useful-eclipse-shortcut-keys.html
 
 VIM
 ===
