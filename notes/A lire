@@ -24,6 +24,10 @@ JAVA
 librairies supplementaires: - http://guava-libraries.googlecode.com/svn/tags/release09/javadoc/index.html -> java selon google
 			    - http://joda-time.sourceforge.net/api-release/index.html -> des dates qui craigent pas \o/
 			    - https://github.com/pyricau/FunkyJFunctional#readme -> pour les fonctions funky.
+				
+-> http://lroux.developpez.com/article/java/tiger/ -> nouveautés java 5
+
+-> http://adiguba.developpez.com/tutoriels/java/6/ ->nouveautes java 6
 
 ECLIPSE:
 ========
