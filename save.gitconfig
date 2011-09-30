@@ -1,0 +1,25 @@
+[core]
+	editor = xemacs
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+[user]
+	name = jgautier
+	email = jgautier@excilys.com
+	
+[alias]
+        ci = commit
+        co = checkout
+        st = status
+        br = branch
+	    tree = log --graph --decorate --pretty=oneline --abbrev-commit --all
+		validate = !sh -c 'git push origin $1:refs/merge-requests/jgautier-$2' -
+
+[remote "origin"]
+    fetch = +refs/heads/*:refs/remotes/origin/*
+    fetch = +refs/devel/jgautier/*:refs/remotes/origin/jgautier/*
+    push = +refs/heads/*:refs/devel/jgautier/*
+[gui]
+	recentrepo = D:/documents/travail/sources/condor/capico-ria
+	recentrepo = D:/documents/travail/sources/condor/capico-core
